@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+
+.body {
+    background-color: darkseagreen;
+}
+
+.header{
+    background-color: rgb(42, 156, 42);
+}
+
+.nav{
+    background-color: rgb(47, 63, 47);
+}
+
+.main{
+    background-color: rgb(167, 188, 143);
+}
+
+.section{
+    background-color: darkseagreen;
+}
+
+.section{
+    background-color: darkseagreen;
+}
+
+.aside{
+    background-color: darkseagreen;
+}
+
+.footer{
+    background-color: darkseagreen;
+}
