@@ -13,6 +13,7 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { SocialComponent } from './components/social/social.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LogoApComponent } from './components/logo-ap/logo-ap.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -28,9 +29,10 @@ import { LogoApComponent } from './components/logo-ap/logo-ap.component';
     FooterComponent,
     LogoApComponent
   ],
-  imports: [
+  imports:[
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgCircleProgressModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]
