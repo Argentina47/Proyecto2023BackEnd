@@ -11,7 +11,9 @@ describe('FooterComponent', () => {
       declarations: [ FooterComponent ]
     })
     .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(FooterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

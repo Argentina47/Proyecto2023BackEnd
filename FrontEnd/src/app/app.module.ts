@@ -14,6 +14,7 @@ import { SocialComponent } from './components/social/social.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LogoApComponent } from './components/logo-ap/logo-ap.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
   imports:[
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     NgCircleProgressModule.forRoot({})
   ],
   providers: [],

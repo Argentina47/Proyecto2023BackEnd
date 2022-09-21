@@ -1,12 +1,19 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "8186dc7c-591c-4c2c-9931-8d916f4f4cf2"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "Proyecto2023": {
       "projectType": "application",
-      "schematics": {},
-      "root": "",
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+      }
+    },
+            "root": "",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
@@ -23,9 +30,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -94,14 +104,9 @@
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.js"
-            ]
+              "node_modules/bootstrap/dist/js/bootstrap.js" ]
           }
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "8186dc7c-591c-4c2c-9931-8d916f4f4cf2"
   }
-}
