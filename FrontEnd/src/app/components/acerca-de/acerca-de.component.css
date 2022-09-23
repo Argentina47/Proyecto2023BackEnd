@@ -2,7 +2,7 @@
     padding: 30px;
 }
 div{
-    background-color: #154579;
+    background-color: #4177ad;
     text-align: center;
 }
 /*estilos de la foto de perfil*/
@@ -10,9 +10,9 @@ div{
     #perfilPhoto{
         position: absolute;
         width: 15%;
-        border-radius: 100%;
-        box-shadow: 3px 3px 3px rgb(12, 228, 217);
-        left: 10%;
+        border-radius: 800%;
+        box-shadow: 3px 3px 3px rgb(177, 194, 193);
+        left: 5%;
         top: 400px;
     } 
 }
@@ -22,7 +22,7 @@ div{
         width: 15px;
         border-radius: 600%;
         box-shadow: 3px 3px 3px grey;
-        left: 10%;
+        left: 5%;
         top: 400px;
     }
     }
