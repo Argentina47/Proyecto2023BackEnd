@@ -1,4 +1,6 @@
 div{
     background-color: #07050e;
+    height: 600px;
+    overflow: hidden;
 }
 
