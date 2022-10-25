@@ -1,5 +1,6 @@
 .row{
-    padding: 20px;
+    padding: 15px;
+    
 }
 div{
     background: #154579;
@@ -8,8 +9,13 @@ div{
 
 h1, h3{
     display:inline;
+    background: #154579;
 }
 
+.class {
+    background: #154579;
+}
 .card {
     width: 18rem;
+    margin: auto;    
     }
