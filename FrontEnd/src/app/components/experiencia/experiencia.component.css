@@ -3,17 +3,17 @@
     
 }
 div{
-    background: #154579;
+    background: #212529;
     color: #fefefe;
 }
 
 h1, h3{
     display:inline;
-    background: #154579;
+    background: #212529;
 }
 
 .class {
-    background: #154579;
+    background: #212529;
 }
 .card {
     width: 18rem;

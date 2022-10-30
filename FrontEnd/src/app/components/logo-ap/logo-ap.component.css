@@ -2,21 +2,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+   
 }
 
 .redes{
-    margin-right: 10em;
+    margin-right: 5em;
+    color: #212529;
+    height: 0.1;
+    width: 1;
+
+    
 }
 
 #logoAP{
-    width: 150px;
+    width: 100px;
     border-radius: 50%;
     height: 75;
     width: 100px;
+  
 }
 img {
         width: 100px;
         height: 70px;
+       
 }
 
 .btn{

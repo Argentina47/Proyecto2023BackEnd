@@ -1,10 +1,11 @@
 .row {
-    padding: 30px;
+    padding: 20px;
 }
 div{
-    background-color: #4177ad;
+    background-color: #212529;
     text-align: center;
     color: #fefefe;
+    
 }
 /*estilos de la foto de perfil*/
 @media (min-width:576px){
@@ -22,7 +23,7 @@ div{
         position: absolute;
         width: 15px;
         border-radius: 600%;
-        box-shadow: 3px 3px 3px grey;
+        box-shadow: 3px 3px 3px #212529;
         left: 5%;
         top: 400px;
     }
