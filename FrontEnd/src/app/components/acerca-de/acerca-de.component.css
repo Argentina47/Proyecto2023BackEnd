@@ -1,12 +1,14 @@
 .row {
-    padding: 20px;
+    padding: 200px;
+    
 }
+
 div{
     background-color: #212529;
     text-align: center;
-    color: #fefefe;
-    
+    color: #fefefe;     
 }
+
 /*estilos de la foto de perfil*/
 @media (min-width:576px){
     #perfilPhoto{
@@ -31,6 +33,6 @@ div{
 /*etiqueta nombre*/
 #nombre{
     font-weight: bold;
-    margin-top: 10%;
-    margin-left: 20%;
+    margin-top: 30%;
+    margin-left: 30%;
   }

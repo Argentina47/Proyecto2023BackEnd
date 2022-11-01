@@ -2,11 +2,11 @@
     }
 
 body {
-        margin: 0;
-        font-size: 1rem;
+        font-size: 5rem;
         line-height: 1.5;
         color:#333;
         overflow-x:hidden;
+        max-width:100%;width:auto;height:auto;
     }
 
 .header {
@@ -25,10 +25,10 @@ body {
 
 
 .content {
-    max-width: 60rem;
+   
     padding-left: 45rem;
     padding-right: 5rem;
-    margin:aunto;
+    margin:auto;
     text-align: center;
 }
 
@@ -48,8 +48,8 @@ body {
 }
 
 .header-overlay {
-    height: 947px;
-    width: 997px;;
+    height: 70px;
+    width: 70px;;
     position: absolute;
     top:0;
     left:0;
@@ -62,11 +62,20 @@ body {
     z-index: 2;
 }
 
-.header-content h1 {
+.header-content h1  {
 font-size: 200px;
 margin-bottom: 0;
 font-family: 'Open Sans', sans-serif; 
 }
+
+.header-content h2  {
+    font-size: 200px;
+    margin-bottom: 0;
+    font-family: 'Open Sans', sans-serif; 
+    }
+
+
+
 .header-content p {
     font-size: 100px;
     display: block;
