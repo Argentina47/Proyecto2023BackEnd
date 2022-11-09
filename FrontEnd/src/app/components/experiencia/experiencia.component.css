@@ -1,5 +1,5 @@
 .row{
-    padding: 70px;
+    padding: 20rem;
     
 }
 div{
@@ -7,15 +7,23 @@ div{
     color: #fefefe;
 }
 
-h1, h3{
+h1{
+    font-size: 36px;
+} 
+
+h5 {
     display:inline;
     background: #212529;
+    font-size: 2rem;
 }
 
 .class {
     background: #212529;
 }
 .card {
-    width: 30rem;
-    margin: auto;    
+    width: 25rem;
+    height: 20;
     }
+
+    /*px no se utiliza para resposive*/
+    /*# 000 hex color - color hexadecimal*/
