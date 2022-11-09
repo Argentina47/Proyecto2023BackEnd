@@ -1,5 +1,7 @@
 .row{
-    padding: 20rem;
+    padding: 8rem;
+
+    
     
 }
 div{
@@ -8,7 +10,7 @@ div{
 }
 
 h1{
-    font-size: 36px;
+    font-size: 8rem;
 } 
 
 h5 {
@@ -21,8 +23,10 @@ h5 {
     background: #212529;
 }
 .card {
-    width: 25rem;
+    width: 60rem;
     height: 20;
+    font-size: 3rem;
+    float: left;
     }
 
     /*px no se utiliza para resposive*/
