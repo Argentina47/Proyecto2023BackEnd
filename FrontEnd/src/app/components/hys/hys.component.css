@@ -1,10 +1,10 @@
+* {
+    padding: 0;}
 .row {
-    background-color: #212529;
-    padding: 20px;
-    color: #fefefe;
-    
-}
+    background-color: #f1f3f5;  
+    color: #fefefe; }
+h1{font-size: 7rem;} 
 
-h1{
-    font-size: 3rem;
-} 
+.imag{
+    height: 315rem;
+    width: 560rem;}
