@@ -11,72 +11,66 @@ body    {
         display: flex;
         align-items:center;
         color: #fff;
-        padding-left: 3rem;
-        
-    }
+        padding-left: 3rem;}
 
 div {
         margin-top: 100px;
         margin-right: 0;
         margin-bottom: 100px;
-        margin-left: 0.5px;
-         }
+        margin-left: 0.5px;}
 
        
 .content {
-    padding-left: 1rem;
-    padding-right: 2rem;
-    margin:auto;
-    text-align: right;
-    }
+        padding-left: 1rem;
+        padding-right: 2rem;
+        margin:auto;
+        text-align: right;}
 
 .header-video {
-            position: absolute;
-            top:40;
-            left:0;
-            width: 100%;
-            height: 50vh;
-            overflow: hidden;
-            position: absolute;}
+        position: absolute;
+        top:30;
+        left:0;
+        width: 100%;
+        height: 50vh;
+        overflow: hidden;
+        position: absolute;}
 
 .header-video video {
-    min-width: 100%;
-    min-height: 100%;}
+        min-width: 100%;
+        min-height: 100%;}
 
 .header-overlay {
-    height: 70px;
-    width: 70px;;
-    position: absolute;
-    top:0;
-    left:0;
-    background: #ffff;
-    z-index:1;
-    opacity: 0;}
+        height: 70px;
+        width: 70px;;
+        position: absolute;
+        top:0;
+        left:0;
+        background: #ffff;
+        z-index:1;
+        opacity: 0;}
 
 .header-content {
-    z-index:2;}   
+        z-index:2;}   
 
 .header-content h1  {
-    font-size: 4em;
-    margin-bottom: 10;
-    font-family: 'Open Sans', sans-serif;
-    margin-left: 7em;}
+        font-size: 4em;
+        margin-bottom: 10;
+        font-family: 'Open Sans', sans-serif;
+        margin-left: 11em;}
 
 .header-content h2  {
-    font-size: 2em;
-    margin-bottom: 10;
-    font-family: 'Open Sans', sans-serif;
-    margin-left: 7em;}
+        font-size: 2em;
+        margin-bottom: 10;
+        font-family: 'Open Sans', sans-serif;
+        margin-left: 10em;}
 
-  
-
-    .header-content p {
+.header-content p {
         font-size: 20em;
         display: block;
         padding-bottom: 2rem;    ;
-        font-family: 'Open Sans', sans-serif;
-        }
+        font-family: 'Open Sans', sans-serif;}
 
 @media (max-width: 60px) {
     .content{
         padding: 0 3 rem 0 3 rem;}}
+
