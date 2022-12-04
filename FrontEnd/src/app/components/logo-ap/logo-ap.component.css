@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+
+
+   .row {
+    background-color: #000000;  
+    padding: 1em;}
+    
+.redes{
+    margin-right: 1em;     
+}
+
+#logoAp{
+        width: 25em;
+        height: 25em;
+}
+
+.btn{
+    border-width: medium;
+}
+
+/*para la listya de celular */
+@media (max-with: 560px){
+    .container{
+    flex-direction: column;
+}
+.redes{
+    display: flex;
+    flex-direction: column;
+    align-items:left; 
+}
+.redes img{
+margin: 0.5em;
+}
+}

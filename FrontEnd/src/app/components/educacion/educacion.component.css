@@ -1,5 +1,5 @@
 .row{
-    padding: 1em;
+    padding: 2em;
     }
 
 .card {
@@ -10,7 +10,7 @@
         margin-left: 10em;
     }
 
-    .class card {
+ .class card {
         width: 15em;
         height: 15rem;
         font-size: 2rem;
@@ -18,6 +18,6 @@
         }
 
 h1{
-       font-size: 4rem;
-       margin-left: 0.5em;
+       font-size: 4em;
+       margin-left: 4em;      
 }
