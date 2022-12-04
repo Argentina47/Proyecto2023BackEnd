@@ -1,11 +1,11 @@
 .row{
-    padding: 8rem; }
+    padding: 5em; }
 div{
     background: #212529;
     color: #fefefe;}
 
 h1{
-    font-size: 8rem;} 
+    font-size: 4em;} 
 
 h5 {
     display:inline;
@@ -20,10 +20,12 @@ h5 {
         height: 10;
         font-size: 3rem;
         float: left;
+        margin-left: 7em;
         }
 
 .class card img {
-        height: 4;}
+        height: 4;
+           }
 
     /*px no se utiliza para resposive*/
     /*# 000 hex color - color hexadecimal*/

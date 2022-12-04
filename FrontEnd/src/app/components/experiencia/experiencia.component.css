@@ -1,10 +1,10 @@
 .row{
     padding: 3rem;
-}
+    }
     
 div{
     background: #212529;
-    color: #fefefe;
+    color: #fefefe;    
 }
 
 h1{
@@ -16,17 +16,22 @@ h5 {
     font-size: 1em;}
 
 .class {
-    background: #212529;}
+    background: #212529;
+    text-align: center;}
+
 
 .card {
     width: 35rem;
     height: 10;
-    font-size: 3rem;
+    font-size: 2rem;
     float: left;
-    margin-left: 7em;}
+    margin-left: 7em;
+
+    text-align: center;}
 
 .class card img {
-        height: 4;}
+        height: 4em;
+        text-align: center;}
 
     /*px no se utiliza para resposive*/
     /*# 000 hex color - color hexadecimal*/
