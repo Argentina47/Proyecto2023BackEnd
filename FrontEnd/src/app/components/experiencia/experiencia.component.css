@@ -1,23 +1,19 @@
 .row{
-    padding: 3rem;
-    
+    padding: 1rem;
     }
     
 div{
     background: #212529;
-    color: #fefefe;     
+    color: #fefefe;    
 }
 
 h1{
-    font-size:4em;
-    } 
-
+    font-size:4em;} 
 
 h5 {
     display:inline;
     background: #212529;
-    font-size: 1em;
-   }
+    font-size: 1em;}
 
 .class {
     background: #212529;
@@ -28,8 +24,8 @@ h5 {
     width: 35rem;
     height: 10;
     font-size: 2rem;
-    text-align: center;
-   }
+    margin-left: 7em;
+    text-align: center;}
 
 .class card img {
         height: 4em;

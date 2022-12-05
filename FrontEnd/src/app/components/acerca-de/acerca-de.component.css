@@ -18,8 +18,8 @@ h1, h2{
         width: 15%;
         border-radius: 100%;
         box-shadow: 3px 3px 3px rgb(243, 241, 241);
-        left: 2%;
-        top: 550px;
+        left: 3%;
+        top: 950px;
     } }
 @media (max-width:400px){
     #perfilPhoto{
