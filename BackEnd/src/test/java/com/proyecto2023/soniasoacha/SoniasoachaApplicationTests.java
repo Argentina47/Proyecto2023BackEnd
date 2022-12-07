@@ -1,10 +1,10 @@
-package com.portfolio.sonias;
+package com.proyecto2023.soniasoacha;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SoniasApplicationTests {
+class SoniasoachaApplicationTests {
 
 	@Test
 	void contextLoads() {
