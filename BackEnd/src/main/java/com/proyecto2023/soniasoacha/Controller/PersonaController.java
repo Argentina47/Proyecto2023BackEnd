@@ -18,17 +18,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin (origins = "http://localhost:8080")
 
-
-
 public class PersonaController {
+    
     @Autowired IPersonaService  ipersonaService;
     
-    @GetMapping("personas/traer")
+    @GetMapping("/personas/traer")
     public List<Persona> getPersona (){
     return ipersonaService.getPersona();           
     }
        
-       @PostMapping("/personas/crear")
+    @PostMapping("/personas/crear")
     public String createPersona(@RequestBody Persona persona){
         ipersonaService.savePersona(persona);
         return "La persona fue creada correctamente";
