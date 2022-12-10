@@ -4,6 +4,8 @@
  */
 package com.proyecto2023.soniasoacha.Security.jwt;
 
+
+
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -15,17 +17,15 @@ import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
 
 @Component
-public class JwtEntryPoint implements AuthenticationEntryPoint{
-    private final static Logger logger = LoggerFactory.getLogger(JwtEntryPoint.class);
-    
+public class JwtEntryPoin implements AuthenticationEntryPoint{
+    private final static Logger logger = LoggerFactory.getLogger(JwtEntryPoin.class);
+
     @Override
-    public void commence{(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException 
-            throw new UnsupportedOperationException;
-            logger.error("Falló el metodo commence");
-            response.sendError(HttpServletResponse.SC_UNAUTHORIZED);    
-                }      
-                    }    
-               
-
-    
-
+    public void commence(HttpServletRequest request, HttpServletResponse response, 
+            AuthenticationException authException)throws IOException, ServletException {
+        logger.error("Falló el metodo commence");
+        response.sendError(HttpServletResponse.SC_UNAUTHORIZED);
+        
+ }
+       
+     }

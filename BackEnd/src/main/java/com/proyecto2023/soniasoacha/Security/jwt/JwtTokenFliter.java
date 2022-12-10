@@ -39,13 +39,20 @@ public class JwtTokenFliter extends OncePerRequestFilter {
                 UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
 
                 SecurityContextHolder.getContext().setAuthentication(auth);
-                } 
-            
+            }
 
-        catch (Exception e) {
-            logger.error("Falla en el metodo")
+        } catch (Exception e) {
+            logger.error("Falla en el metodo doFilterInternal");
         }
-
+        filterChain.doFilter(request, response);
     }
 
-}
+    private String getToken(HttpServletRequest request) {
+    String header = request.getHeader("Authorization");
+    if (header !=null && header.startsWith("Bearer"))
+        return header.replace ("Bearer","");
+    return null;
+        
+    }
+
+   }
