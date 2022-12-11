@@ -5,6 +5,8 @@
 package com.proyecto2023.soniasoacha.Security;
 
 import com.proyecto2023.soniasoacha.Security.Service.UserDetailsImpl;
+import com.proyecto2023.soniasoacha.Security.jwt.JwtEntryPoin;
+import com.proyecto2023.soniasoacha.Security.jwt.JwtTokenFliter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,21 +19,20 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity (prePostEnabled = true)
-
-public class MainSecurity {extends WebSecurityConfigurerAdapter{
-    }
-@Autowired
+@EnableGlobalMethodSecurity(prePostEnabled = true)
+public class MainSecurity extends WebSecurityConfigurerAdapter {  
+    @Autowired
     UserDetailsImpl userDetailsServicesImpl;
     @Autowired
-    JwtEntryPoint jwtEntryPoint; 
+    JwtEntryPoin jwtEntryPoint; 
     
     @Bean
-    public JwtTokenFilter jwtTokenFilter(){
-        return new JwtTokenFilter();
+    public  JwtTokenFliter jwtTokenFilter(){
+        return new JwtTokenFilter( );
     }
     
     @Bean
@@ -41,108 +42,30 @@ public class MainSecurity {extends WebSecurityConfigurerAdapter{
     
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-       http.cors().and().csrf().disable()
-              @authorizeHttpRequests()
-              @antMatchers("/auth/**").permitAll()
-              @anyRequest().authenticated()
+        http.cors().and().csrf().disable()
+              @authorizeRequests()
+              @andMatchers("/auth/**").permitAll()
+              @anyRequest().authenticated() 
               @and()
               @exceptionHandling().authenticationEntryPoint(jwtEntryPoint)
-              @and()
+                @and()
               @sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-               
-               
+        htpp.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
     }
 
     @Override
-    protected AuthenticationManager authenticationManager() throws Exception {
+    protected AuthenticationManager authenticationManager()throws Exception {
         return super.authenticationManager();
     }
+
     @Bean
     @Override
-    public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManagerBean(); 
+    public AuthenticationManager authenticationManagerBean()throws Exception {
+        return super.authenticationManagerBean();
     }
 
     @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+    protected void configure(AuthenticationManagerBuilder auth)throws Exception {
         auth.userDetailsService(userDetailsServicesImpl).passwordEncoder(passwordEncoder());
     }
-       
 }
-
-
-    public UsuarioPrincipal(String nombre, String nombreUsuario, String email, String password, Collection<? extends GrantedAuthority> authorities) {
-        this.nombre = nombre;
-        this.nombreUsuario = nombreUsuario;
-        this.email = email;
-        this.password = password;
-        this.authorities = authorities;
-    }
-    
-   public static UsuarioPrincipal build(Usuario usuario){
-       List<GrantedAuthority> authorities = usuario.getRoles().stream().map(rol-< new SimpleGrantedAuthority(rol.getRolNombre().name())).collector
-   }
-
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
-    @Override
-    public String getPassword() {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
-    @Override
-    public String getUsername() {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
-    @Override
-    public boolean isAccountNonExpired() {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
-    @Override
-    public boolean isAccountNonLocked() {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
-    @Override
-    public boolean isEnabled() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-          
-}
-
-
-
-throws IOException, ServletException
-        {
-    throw new UnsupportedOperationException ("Not supported yet.");
-
-
-
- @Override
-    public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException)
-            logger.error("Fallo el metodo commence");
-         response.sendError (HttpServletResponse.SC_UNAUTHORIZED);
-
-        throws IOException, ServletException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-JWT
-@Override
-    public void commence(HttpServletRequest request, HttpServletResponse response, 
-            AuthenticationException authException) 
-                   
-            throws IOException, ServletException {
-        throw new UnsupportedOperationException("Not supported yet.");
-        
-

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-logo-ap',
@@ -7,13 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./logo-ap.component.css']
 })
 export class LogoApComponent implements OnInit {
+  isLogged = false;
 
-  constructor(private router:Router) { }
+
+  constructor(private router:Router, private tokenService: TokenService) { }
 
   ngOnInit(): void {
+    if
   }
 login(){
  this.router.navigate(['/login']);  
-}
+  }
 
 }

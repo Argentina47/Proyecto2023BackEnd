@@ -12,6 +12,9 @@ describe('LogoApComponent', () => {
     })
     .compileComponents();
 
+  });
+
+  beforeEach(() => {
     fixture = TestBed.createComponent(LogoApComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
