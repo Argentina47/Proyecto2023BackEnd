@@ -6,7 +6,7 @@ package com.proyecto2023.soniasoacha.Security.Controller;
 
 
 public class Mensaje {
-    private String mensaje; 
+    private   String mensaje; 
     
     //Constructores
 
