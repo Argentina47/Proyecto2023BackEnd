@@ -1,74 +1,25 @@
 <div class="row">
-    <h1>Experiencia Laboral</h1>
-    
+    <h1>Experiencia Laboral</h1>    
+<div class="col-lg-2"></div>   
+<button type="button"  class="btn btn-danger" routerLink="/nuevaexpe" *ngIf="isLogged">
+    Nueva Experiencia
+</button>
 
-    <div class="">
-           <div class="row">     
-            
-        <div class="col">
-          <div class="card">
-            <img src="../../../assets/imagen_lpx.png" class="card-img-top" alt="user-card">
-            <div class="card-body">
-              <h5 class="card-title">LPX Servicios - Nobel Services SRL</h5>
-              <p class="card-text">Responsable de Rh (2020-2022) Empresa Argentina prestadora de servicios en sectores oficiales y privados, desarrollan limpieza en grandes superficies, hospitales, laboratorios, escuelas, centros comerciales y hoteles.</p>
-               </div>
-               </div>
-        </div>
-
-        <div class="col">
-          <div class="text-center card">
-            <img src="../../../assets/imagen_ uniminuto.png" class="card-img-top" alt="user-card">
-            <div class="card-body">
-             <h5 class="card-title">Universidad Minuto de Dios</h5>
-             <p class="card-text">Docente Universitario (2017-2019) La Universidad Minuto de Dios es una institución dedicada a la educación superior a nivel nacional en Colombia, desarrollan y promueven en todas las regiones de Colombia.</p>
-             </div>          
-             </div>
-        </div>
-
-        <div class="col-xl">
-          <div class="text-center card">
-            <img src="../../../assets/imagen_Indra.bmp" class="card-img-top" alt="user-card">
-            <div class="card-body">
-              <h5 class="card-title">Indra Tecnologías de la Información</h5>
-              <p class="card-text">Administradora de Recursos Humanos (2007-2008) Una de las principales compañías globales de tecnología y consultoría y el socio tecnológico para las operaciones clave de los negocios de sus clientes en todo el mundo.</p>
-            </div>
-            </div>  
-        </div>
-      </div>
-
-
-      <div class="row">
-        <div class="col-xl">
-
-          <div class="card">
-            <img src="../../../assets/imagen_sena.png" class="card-img-top" alt="user-card">
-            <div class="card-body">
-              <h5 class="card-title">SENA</h5>
-              <p class="card-text">Instructora (2016-2019) El Servicio Nacional de Aprendizaje SENA, establecimiento público del orden nacional en Colombia, formación en programas técnicos, tecnológicos y complementarios enfocados al desarrollo económico, tecnológico y social, es un operador autorizado por el Ministerio de Trabajo para realizar procesos de intermediación laboral en Colombia y en el exterior.
-                </p>
-                </div>
-          </div>   
-
-        </div>
-        <div class="col">
-            <div class="card">
-              <img src="../../../assets/imagen_bioelectrolab.png" class="card-img-top" alt="user-card">
-              <div class="card-body">
-                <h5 class="card-title">Bioelectrolab</h5>
-                <p class="card-text">Directora de Recursos Humanos (2009-2011) Empresa dedicada a la prestación de servicios de tecnología biomédica, comercialización, asesoría, consultoría, mantenimiento preventivo, correctivo y sistemático completo.</p>
-              </div>
-              </div> 
-        </div>
-
-        <div class="col">
-          <div class="card">
-              <img src="../../../assets/img_redcom.png" class="card-img-top" alt="user-card">
-              <div class="card-body">                
-                <h5 class="card-title">Proyecto Redcom</h5>
-                <p class="card-text">Directora de Ingresos y Bienestar (2012-2012) Empresa dedicada a la prestación de servicios de tecnología biomédica, comercialización, asesoría, consultoría, mantenimiento preventivo, correctivo y sistemático completo.</p>
-              </div>
-              </div>  
-      </div>
-          </div>
-              </div>
-                </div>    
+<div class="col-lg-1"></div>   
+<div class="col-lg-11">
+    <table>class="table">
+       <tbody>
+        <tr *ngFor= "let Experiencia of expe">                  
+                  <td>
+                    <h2>{{Experiencia.nombreE}}</h2>
+                </td>
+                  <td>{{Experiencia.descripcionE}}</td>
+                  <td> <button class="btn btn-danger" routerLink="/editexp/{{Experiencia.id}}">
+                    <i class="bi bi-brush-fill"></i> EDITAR</button>
+                </td>               
+            <td>BORRAR</td> 
+             </tr>
+        </tbody>
+     </table>
+  </div>
+</div>
