@@ -27,5 +27,18 @@ expe: Experiencia [] = [];
     cargarExperiencia(): void{
       this.sExperiencia.lista().subscribe(data => {this.expe = data;})
     }
+
+
+    delete(id?: number){     
+      if(id !=undefined){
+        this.sExperiencia.delete(id).subscribe(
+          data=> {
+            this.cargarExperiencia();
+          },err => {
+            alert("No se puedo borrar la experiencia")
+          }
+        )
+      }
+    }
   }
 
