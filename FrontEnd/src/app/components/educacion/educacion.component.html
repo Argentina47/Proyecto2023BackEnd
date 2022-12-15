@@ -1,40 +1,31 @@
-
-  <div class="row">
-                <div class="panel col-lg-12">
-                        <h1 class="section-title">Educación</h1>
-                        <div class="row">
-                                <div class="col">
-                                        <div class="card">
-                                                <img src="../../../assets/yoprogramo.png" class="card-img-top" alt="..." >
-                                                <ul class="list-group list-group-flush">
-                                                <li class="list-group-item edu-degree"><h3>Estudiante Developer Full Stack</h3></li>
-                                                <li class="list-group-item edu-institution">Argentina Programa - #Yo Programo/li>
-                                                <li class="list-group-item edu-date">2022 - En curso</li>
-                                                </ul>
-                                        </div>
-                                </div>
-                                <div class="text-center col">
-                                        <div class="card">
-                                                <img src="../../../assets/utn.jpg" class="card-img-top" alt="...">
-                                                <ul class="list-group list-group-flush">
-                                                <li class="list-group-item edu-degree"><h3>>Especialista en Ingenieria Gerencial</h3></li>
-                                                <li class="list-group-item edu-institution">Universidad Tecnológica Nacional</li>
-                                                <li class="list-group-item edu-date">Junio 2016</li>
-                                                </ul>
-                                        </div>
-                                </div>
-                                      
-                                <div class="text-center col">
-                                 <div class="card">
-                                                <img src="../../../assets/coaching.png.jpeg" class="card-img-top" alt="...">
-                                                <ul class="list-group list-group-flush">
-                                                <li class="list-group-item edu-degree"><h3>Coaching psicológico integral</h3></li>
-                                                <li class="list-group-item edu-institution">Escuela de Coaching - Mendoza Argentina.</li>
-                                                <li class="list-group-item edu-degree">2017-2018</li>
-                                                </ul>
+<div class="row">
+        <h1>Educacion</h1>
+        <div class="col-lg-2">
+            <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+                Agregar Educacion
+            </button>
         </div>
-                </div>
-                        </div>
-                                </div>
-                                        </div>
-      
+    
+        <div class="col lg 1"></div>
+        <div class="col-lg-11">
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let Educacion of educacion">
+                        <td>
+                            <h2>{{Educacion.nombreE}}</h2>
+                        </td>
+                        <td>{{Educacion.descripcionE}}</td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
+                                <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                                <i class="bi bi-trash-fill"></i> BORRAR</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+    </div>
