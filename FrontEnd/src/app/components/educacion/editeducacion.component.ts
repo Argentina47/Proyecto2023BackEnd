@@ -2,12 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Educacion } from 'src/app/model/educacion';
 import { EducacionService } from 'src/app/service/educacion.service';
+
 @Component({
   selector: 'app-editeducacion',
   templateUrl: './editeducacion.component.html',
   styleUrls: ['./editeducacion.component.css']
 })
 export class EditeducacionComponent implements OnInit {
+  [x: string]: any;
   educacion: Educacion = null;
   
   constructor(
@@ -19,12 +21,12 @@ export class EditeducacionComponent implements OnInit {
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.educacionS.detail(id).subscribe(
-      data =>{
+      data => {
         this.educacion = data;
-        }, err =>{
-          alert("Error al modificar");
+         }, err => {
+          alert("Error al modificar experiencia");
           this.router.navigate(['']);
-        }
+      }
     )
   }
  
