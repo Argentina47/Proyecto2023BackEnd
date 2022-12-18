@@ -21,7 +21,7 @@ import { interceptorProvider } from './service/interceptor-service';
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia/new-experiencia.component';
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia/edit-experiencia.component';
 import { NeweducacionComponent } from './components/educacion/neweducacion.component';
-import { EditeducacionComponent } from './components/educacion/editeducacion.component';
+import { EditEducacionComponent } from './components/educacion/editeducacion.component';
 import { EditSkillComponent } from './components/hys/edit-skill/edit-skill.component';
 import { NewSkillComponent } from './components/hys/new-skill/new-skill.component';
 
@@ -44,7 +44,7 @@ import { NewSkillComponent } from './components/hys/new-skill/new-skill.componen
     NewExperienciaComponent,
     EditExperienciaComponent,
     NeweducacionComponent,
-    EditeducacionComponent,
+    EditEducacionComponent,
     EditSkillComponent,
     NewSkillComponent
   ],

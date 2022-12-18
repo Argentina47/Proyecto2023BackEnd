@@ -8,7 +8,7 @@ import { Educacion } from '../model/educacion';
   providedIn: 'root'
 })
 export class EducacionService {
-  URL ='http://localhost:8080/educacion';
+  URL ='http://localhost:4200/educacion';
 
 constructor(private httpClient : HttpClient) { }
 
@@ -34,7 +34,4 @@ public lista(): Observable<Educacion[]>{
 public delete(id: number): Observable<any>{
   return this.httpClient.delete <any> (this.URL + 'delete/${id}');
 }
-
-
-
 }

@@ -8,7 +8,7 @@ import { EducacionService } from 'src/app/service/educacion.service';
   templateUrl: './editeducacion.component.html',
   styleUrls: ['./editeducacion.component.css']
 })
-export class EditeducacionComponent implements OnInit {
+export class EditEducacionComponent implements OnInit {
   [x: string]: any;
   educacion: Educacion = null;
   
@@ -22,14 +22,13 @@ export class EditeducacionComponent implements OnInit {
     const id = this.activatedRouter.snapshot.params['id'];
     this.educacionS.detail(id).subscribe(
       data => {
-        this.educacion = data;
+        this['Educacion'] = data;
          }, err => {
           alert("Error al modificar experiencia");
           this.router.navigate(['']);
       }
     )
   }
- 
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
