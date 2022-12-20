@@ -1,4 +1,3 @@
-
 package com.proyecto2023.soniasoacha.Service;
 
 import com.proyecto2023.soniasoacha.Entity.Persona;
@@ -12,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Transactional 
-public class ImpPersonaService{
+public class IPersonaService{
 @Autowired  IPersonaRepository ipersonaRepository;
 
   public List<Persona> list(){

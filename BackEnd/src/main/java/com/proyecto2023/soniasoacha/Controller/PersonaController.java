@@ -1,7 +1,7 @@
 package com.proyecto2023.soniasoacha.Controller;
 
 import com.proyecto2023.soniasoacha.Entity.Persona;
-import com.proyecto2023.soniasoacha.IPersonaService;
+import com.proyecto2023.soniasoacha.Service.IPersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -17,21 +17,22 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
 public class PersonaController {
-    @Autowired IPersonaService ipersonaService;
+  
+    @Autowired IPersonaService iPersonaService;
     
-    @GetMapping("personas/traer")
+    @GetMapping("/personas/traer")
     public List<Persona> getPersona(){
-        return ipersonaService.getPersona();
+        return iPersonaService.list();
     }
     
     @PostMapping("/personas/crear")
     public String createPersona(@RequestBody Persona persona){
-        ipersonaService.savePersona(persona);
+        iPersonaService.save(persona);
         return "La persona fue creada correctamente";
     }
     @DeleteMapping("/personas/borrar/{id}")
     public String deletePersona(@PathVariable Long id){
-        ipersonaService.deletePersona(id);
+        iPersonaService.delete(id);
         return "La persona fue eliminada correctamente";
     }
     
@@ -40,19 +41,17 @@ public class PersonaController {
                                @RequestParam("nombre") String nuevoNombre,
                                @RequestParam("apellido") String nuevoApellido,
                                @RequestParam("img") String nuevoImg){
-        Persona persona = ipersonaService.findPersona(id);
-        
+        Persona persona = iPersonaService.find(id);
         persona.setNombre(nuevoNombre);
         persona.setApellido(nuevoApellido);
         persona.setImg(nuevoImg);
         
-        ipersonaService.savePersona(persona);
+        iPersonaService.save(persona);
         return persona;
     }
     
-    @GetMapping("personas/traer/perfil")
+    @GetMapping("/personas/traer/perfil")
     public Persona findPersona(){
-        return ipersonaService.findPersona((long)1);
+        return iPersonaService.find((long)1);
     }
-   
-}
+   }
