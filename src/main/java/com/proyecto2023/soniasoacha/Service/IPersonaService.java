@@ -7,6 +7,7 @@ import java.util.Optional;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 
 @Service
@@ -18,8 +19,8 @@ public class IPersonaService{
          return ipersonaRepository.findAll();
      }
      
-     public Optional<Persona> getOne(int id){
-         return ipersonaRepository.findById(id);
+     public Persona getOne(int id){
+         return ipersonaRepository.findById(1);
      }
      
      public Optional<Persona>getByNombre(String nombre){
@@ -41,4 +42,8 @@ public class IPersonaService{
      public boolean existsByNombre(String nombre){
          return ipersonaRepository.existsByNombre(nombre);
      }
+
+    public List<Persona> getPersona() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
  }

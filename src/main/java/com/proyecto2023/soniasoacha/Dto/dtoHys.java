@@ -12,6 +12,8 @@ public class dtoHys {
     @NotBlank
     private String nombre;
     @NotBlank
+    private String img;
+    @NotBlank
     private int porcentaje;
 
     public dtoHys() {

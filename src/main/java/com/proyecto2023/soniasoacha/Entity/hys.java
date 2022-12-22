@@ -12,7 +12,7 @@ import javax.persistence.Id;
 @Entity
 public class hys {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String nombre;
     private int porcentaje;

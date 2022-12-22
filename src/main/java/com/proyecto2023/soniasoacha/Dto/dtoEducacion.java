@@ -11,6 +11,10 @@ public class dtoEducacion {
       private String nombreE;
      @NotBlank
       private String descripcionE;
+     @NotBlank
+    private String imgE;
+     
+     
      
      public dtoEducacion(){
     }
