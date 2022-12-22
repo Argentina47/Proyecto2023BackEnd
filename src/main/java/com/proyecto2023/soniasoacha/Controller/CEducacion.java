@@ -30,7 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class CEducacion {
     @Autowired
     SEducacion sEducacion; 
-    
+       
     
     @GetMapping("/lista")
     public ResponseEntity<List<Educacion>> list(){
@@ -67,8 +67,8 @@ public class CEducacion {
         if(sEducacion.existsByNombreE(dtoeducacion.getNombreE())){
         return new ResponseEntity(new Mensaje ("Ese nombre ya existe"),HttpStatus.BAD_REQUEST);
         }
-          
-        Educacion educacion = new sEducacion(
+
+        Educacion educacion = new educacion(
         dtoeducacion.getNombreE(), dtoeducacion.getDescripcionE()
         );
         
