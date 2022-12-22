@@ -8,9 +8,9 @@ import com.proyecto2023.soniasoacha.Security.Entity.Rol;
 import com.proyecto2023.soniasoacha.Security.Enums.RolNombre;
 import com.proyecto2023.soniasoacha.Security.Repository.iRolRepository;
 import java.util.Optional;
-import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional

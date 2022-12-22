@@ -4,7 +4,8 @@
  */
 package com.proyecto2023.soniasoacha.Dto;
 
-import javax.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotBlank;
+
 
 public class dtoEducacion {
      @NotBlank
