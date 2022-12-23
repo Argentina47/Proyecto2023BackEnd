@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package com.proyecto2023.soniasoacha.Controller;
 
 import com.proyecto2023.soniasoacha.Entity.Persona;
@@ -28,26 +32,27 @@ public class PersonaController {
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/personas/crear")
+    
     public String createPersona(@RequestBody Persona persona){
-        ipersonaService.save(persona);
-        return "La persona fue creada correctamente";
+    ipersonaService.save(persona);
+    return "La persona fue creada correctamente";
     }
 
     @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/personas/borrar/{id}")
-    public String deletePersona(@PathVariable int id){
-        ipersonaService.delete(id);
-        return "La persona fue eliminada correctamente";
+    public String deletePersona(@PathVariable Long id){
+       ipersonaService.delete("id");
+       return "La persona fue eliminada correctamente";
     }
 
     @PreAuthorize("hasRole('ADMIN')")
-    @PutMapping("/personas/editar/{id}")
-    public Persona editPersona(@PathVariable int id,
-                               @RequestParam("nombre") String nuevoNombre,
-                               @RequestParam("apellido") String nuevoApellido,
-                               @RequestParam("img") String nuevoImg){
-        
-        Persona persona = ipersonaService.getOne(id);
+      @PutMapping("/personas/editar/{id}")
+    public Persona editPersona(@PathVariable Long Id,
+            @RequestParam("nombre") String nuevoNombre,
+            @RequestParam("Apellido") String nuevoApellido,
+            @RequestParam("Img") String nuevoImg)
+    {
+        Persona persona =ipersonaService.find(Id);
         persona.setNombre(nuevoNombre);
         persona.setApellido(nuevoApellido);
         persona.setImg(nuevoImg);
@@ -59,5 +64,5 @@ public class PersonaController {
         @GetMapping("personas/traer/perfil")
         public Persona findPersona(){
         return ipersonaService.getOne(1);
-    }
+}
 }

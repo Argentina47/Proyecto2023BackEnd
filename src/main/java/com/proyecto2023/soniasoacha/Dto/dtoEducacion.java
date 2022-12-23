@@ -47,5 +47,9 @@ public class dtoEducacion {
     public void setImgE(String imgE) {
         this.imgE = imgE;
     }
+
+    public String getFecha(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
 

@@ -18,7 +18,7 @@ public class IPersonaService{
          return ipersonaRepository.findAll();
      }
      
-     public Persona getOne(int id){
+     public Optional<Persona> getOne(int id){
          return ipersonaRepository.findById(1);
      }
      
