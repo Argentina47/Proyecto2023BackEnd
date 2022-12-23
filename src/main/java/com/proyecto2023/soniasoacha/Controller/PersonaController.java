@@ -41,7 +41,7 @@ public class PersonaController {
     @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/personas/borrar/{id}")
     public String deletePersona(@PathVariable Long id){
-       ipersonaService.delete("id");
+       ipersonaService.delete(id);
        return "La persona fue eliminada correctamente";
     }
 
@@ -52,7 +52,7 @@ public class PersonaController {
             @RequestParam("Apellido") String nuevoApellido,
             @RequestParam("Img") String nuevoImg)
     {
-        Persona persona =ipersonaService.find(Id);
+        Persona persona =ipersonaService.get(id);
         persona.setNombre(nuevoNombre);
         persona.setApellido(nuevoApellido);
         persona.setImg(nuevoImg);
