@@ -18,9 +18,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-public class JwtTokenFliter extends OncePerRequestFilter {
+    public class JwtTokenFilter extends OncePerRequestFilter {
 
-    private final static Logger logger = LoggerFactory.getLogger(com.proyecto2023.soniasoacha.Security.jwt.JwtProvider.class);
+    private final static Logger logger = LoggerFactory.getLogger (JwtProvider.class);
 
     @Autowired
     JwtProvider jwtProvider;
@@ -51,7 +51,7 @@ public class JwtTokenFliter extends OncePerRequestFilter {
     if (header !=null && header.startsWith("Bearer"))
         return header.replace ("Bearer","");
     return null;
-        
     }
-
    }
+
+

@@ -63,6 +63,6 @@ public class PersonaController {
 
         @GetMapping("personas/traer/perfil")
         public Persona findPersona(){
-        return ipersonaService.getOne(1);
+        return ipersonaService.get(id);
 }
 }
