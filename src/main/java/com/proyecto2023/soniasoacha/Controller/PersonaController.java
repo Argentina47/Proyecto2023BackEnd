@@ -8,6 +8,7 @@ import com.proyecto2023.soniasoacha.Entity.Persona;
 import com.proyecto2023.soniasoacha.Service.IPersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -41,7 +42,7 @@ public class PersonaController {
     @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/personas/borrar/{id}")
     public String deletePersona(@PathVariable Long id){
-       ipersonaService.delete(id);
+       ipersonaService.deleteById(id);
        return "La persona fue eliminada correctamente";
     }
 
@@ -52,7 +53,7 @@ public class PersonaController {
             @RequestParam("Apellido") String nuevoApellido,
             @RequestParam("Img") String nuevoImg)
     {
-        Persona persona =ipersonaService.get(id);
+        Persona persona =ipersonaService.getOne(id);
         persona.setNombre(nuevoNombre);
         persona.setApellido(nuevoApellido);
         persona.setImg(nuevoImg);
@@ -63,6 +64,6 @@ public class PersonaController {
 
         @GetMapping("personas/traer/perfil")
         public Persona findPersona(){
-        return ipersonaService.get(id);
+        return ipersonaService.getOne(id);
 }
 }

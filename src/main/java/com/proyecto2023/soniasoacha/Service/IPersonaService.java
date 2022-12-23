@@ -2,9 +2,12 @@ package com.proyecto2023.soniasoacha.Service;
 
 import com.proyecto2023.soniasoacha.Entity.Persona;
 import com.proyecto2023.soniasoacha.Repository.IPersonaRepository;
+import jakarta.persistence.metamodel.SingularAttribute;
+import java.io.Serializable;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.domain.AbstractPersistable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -45,5 +48,13 @@ public class IPersonaService{
     public List<Persona> getPersona() {
         throw new UnsupportedOperationException("Not supported yet."); 
 // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public Persona getOne(SingularAttribute<AbstractPersistable, Serializable> id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public void deleteById(Long id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
  }
