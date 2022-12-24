@@ -57,7 +57,7 @@
                              <dependency>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-starter-security</artifactId>
-                    <version>2.7.0</version>
+                    <version>3.0.0</version>
                 </dependency>
                 
                    <dependency>
@@ -69,7 +69,7 @@
                 <dependency>
                     <groupId>org.apache.commons</groupId>
                     <artifactId>commons-lang3</artifactId>
-                    <version>3.8.1</version>
+                    <version>3.12.0</version>
                         <type>jar</type>
                 </dependency>
 
@@ -80,6 +80,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+                                <version>3.0.0</version>
 				<configuration>
 					<excludes>
 						<exclude>
